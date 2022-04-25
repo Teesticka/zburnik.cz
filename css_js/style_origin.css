@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #00065b;
+}
+
+
+.container{
+    width: min(1400px, 94%);
+    margin: 0 auto;
+}
+
+.display-menu{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-menu img{
+    width: 170px;
+}
+
+.btn{
+    padding: 1.25rem;
+    background: #07eb83;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: 0 0.9375rem 1.875rem -0.9375rem #01d684;
+    border-radius: 0.3125rem;
+    position: relative;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    background: #35D684;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 0.3125rem 0.3125rem;
+    transition: all .75s cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.btn:hover::after{
+    height: 100%;
+    border-radius: 0.3125rem;
+}
+
+span{
+    z-index: 1;
+    position: relative;
+}
+
+
+/******** HEADING GRID  ********/
+
+.heading{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 30px;
+}
+
+
+.heading-text h1{
+    font-size: 2.875rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+.heading-img img{
+    width: 100%;
+}
+
+
+
+/********* GRID 3 ITEMS *********/
+
+.grid-top{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    border-radius: 0.8125rem;
+    box-shadow: 0 0.3125rem 2.8125rem #e7f0ff;
+    margin-top: 10vh;
+}
+
+.one-grid{
+    display: flex;
+    gap: 10px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.one-grid::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: transparent;
+    left: 0;
+    bottom: 0;
+    transition: all .2s;
+}
+
+.one-grid:first-child:hover::before{
+    border-radius: 0 0 0 0.3125rem;
+    height: 0.7rem;
+    background: #35D684;
+}
+
+.one-grid:nth-child(2):hover::before{
+    height: 0.7rem;
+    background: #35D684;
+}
+
+.one-grid:last-child:hover::before{
+    border-radius: 0 0 0.3125rem 0;
+    height: 0.7rem;
+    background: #35D684;
+}
+
+.one-grid:first-child::after,
+.one-grid:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    background-color: #e9f1ff;
+    height: calc(100% - 2rem);
+    width: 0.125rem;
+    right: 0;
+
+}
+
+
+
+.one-grid i{
+    color: #35D684;
+    font-size: 2.5rem;
+}
+
+.one-grid p{
+    font-weight: 700;
+}
+
+
+/******* ABOUT ME *******/
+
+
+.about-me{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20vh;
+    position: relative;
+    padding-top: 30px;
+}
+
+.about-me::after{
+    content: "";
+    position: absolute;
+    border: 0.0625rem solid #e9f1ff;
+    bottom: -40;
+    width: 100%;
+
+}
+
+.about-me-img{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.about-me img{
+    width: 450px;
+}
+
+
+.options-text h2{
+    position: relative;
+    font-size: 2.1875rem;
+    font-weight: 700;
+    margin-bottom: 3vh;
+    padding-left: 20px;
+}
+
+.options-text h2::before{
+    position: absolute;
+    content: url(../files/diamond.svg);
+    width: 30px;
+    left: -10;
+    top: 4;
+}
+
+.options-text p{
+    color: #7387ac;
+    line-height: 24px;
+    padding-left: 20px;
+}
+
+.options-text a{
+    padding-left: 20px;
+}
+
+/*************PROC JA  **************/
+
+/* .warum-ich{
+    order: 1;
+    justify-content: start;
+} */
+
+
+.about-me-img{
+    order: 1;
+    justify-content: start;
+}
+
+
+/******* CO VSE UMIM *********/
+
+.heading-h2{
+    text-align: center;
+}
+
+.heading-h2 h2{
+    position: relative;
+    font-size: 2.1875rem;
+    font-weight: 700;
+    margin-bottom: 5vh;
+    padding-left: 20px;
+}
+
+.heading-h2 h2::before{
+    position: absolute;
+    content: url(../files/diamond.svg);
+    width: 30px;
+    top: 4;
+    left: calc(50% - 9rem);
+
+}
+
+.grid-all{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.grid-all::before{
+    content: "";
+    border: 0.25rem solid #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+
+.all-in-one{
+    position: relative;
+    margin-bottom: 20vh;
+}
+
+
+
+.grid-all .img-um{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.0625rem solid #e9f1ff;
+    position: relative;
+}
+
+
+.grid-all img{
+    width: 150px;
+}
+
+
+/****** PORTFOLIO ******/
+.portfolio{
+    padding-top: 100px;
+}
+
+.portfolio-H2{
+    text-align: center;
+}
+
+.portfolio-H2 h2{
+    position: relative;
+    font-size: 2.1875rem;
+    font-weight: 700;
+    margin-bottom: 5vh;
+    padding-left: 20px;
+}
+
+.portfolio-H2 h2::before{
+    position: absolute;
+    content: url(../files/diamond.svg);
+    width: 30px;
+    top: 4;
+    left: calc(50% - 3em);
+
+}
+
+.portfolio p{
+    color: #7387ac;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+.btn-view{
+    padding-left: 18px;
+    margin-top: 50px;
+}
+
+
+/******** FOOTER ********/
+
+footer{
+    margin-bottom: 150px;
+}
+
+
+.next{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.next h2{
+    position: relative;
+    font-size: 2.1875rem;
+    font-weight: 700;
+    margin-bottom: 5vh;
+    padding-left: 20px;
+}
+
+.next h2::before{
+    position: absolute;
+    content: url(../files/diamond.svg);
+    width: 30px;
+    top: 4;
+    left: calc(50% - 3em);
+}
+
+.next p{
+    color: #7387ac;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+.grid-contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-radius: 0.8125rem;
+    box-shadow: 0 0.3125rem 2.8125rem #e7f0ff;
+    margin-top: 10vh;
+}
+
+.item-contact{
+    display: flex;
+    gap: 10px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.item-contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: transparent;
+    left: 0;
+    bottom: 0;
+    transition: all .2s;
+}
+
+
+.item-contact:first-child:hover::before{
+    border-radius: 0 0 0 0.3125rem;
+    height: 0.7rem;
+    background: #35D684;
+}
+
+.item-contact:last-child:hover::before{
+    border-radius: 0 0 0.3125rem 0;
+    height: 0.7rem;
+    background: #35D684;
+}
+
+
+.item-contact i{
+    color: #35D684;
+    font-size: 2.5rem;
+}
+
+.item-contact p{
+    font-weight: 700;
+}
+
+.container-2{
+    width: min(600px, 94%);
+    margin: 0 auto;
+}
+
+
+
+/****** MEDIA QUERIES *******/
+
+@media (max-width: 1004px){
+    .heading-text{
+        order: 1;
+    }
+
+    .heading-text h1{
+        font-size: 23px;
+        text-align: center;
+    }
+
+
+    .about-me-img{
+        order: 2;
+        justify-content: center;
+    }
+    .warum-ich{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 500px){
+    .about-me img {
+        width: 50%;
+    }
+
+
+
+    .heading-text h1{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about-me{
+        display: block;
+    }
+
+    .options-text h2, .next-text h2, .heading-h2 h2, .portfolio-h2 h2{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+
+    .options-text h2::before{
+    display: none;
+    }
+
+    .heading-h2 h2::before{
+        display: none;
+    }
+
+    .one-grid::before{
+        display: none;
+    }
+
+
+    .container{
+        width: 100%;
+    }
+
+    .one-grid:first-child::after,
+    .one-grid:nth-child(2)::after{
+        display: none;
+    }
+
+    .options-text p{
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .btn-view{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .portfolio-H2 h2::before{
+        display: none;
+    }
+
+    .next h2::before {
+        left: calc(50% - 3.5em);
+    }
+}
